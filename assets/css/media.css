@@ -69,6 +69,108 @@
     .hero-subtext {
         font-size: 17px;
     }
+
+    /* -------------about-me------------------ */
+
+    .about-me-left h2 {
+        font-size: 36px;
+        margin-bottom: 20px;
+    }
+
+    .skills-list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); 
+    }
+
+    /* -----------------------projects----------------------- */
+    .projects-section {
+        padding: 80px 40px;
+    }
+
+    .projects-section .main-title {
+        font-size: 38px;
+        margin-bottom: 50px;
+    }
+
+    .projects-list {
+        gap: 60px; /* ოდნავ შევამციროთ დაშორება სექციებს შორის */
+    }
+
+    .project-item {
+        flex-direction: row; /* გვერდიგვერდ განლაგება */
+        gap: 40px;
+        align-items: center;
+    }
+
+    /* ყოველი მეორე პროექტის სურათი გადავიდეს მარჯვნივ */
+    .project-item:nth-child(even) {
+        flex-direction: row-reverse;
+    }
+
+    .project-img {
+        flex: 1;
+    }
+
+    .project-info {
+        flex: 1;
+        text-align: left;
+    }
+
+    .project-info h3 {
+        font-size: 24px;
+        margin: 8px 0 12px;
+    }
+
+    .project-info p {
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
+
+    /* ისრის ღილაკის ზომა ტაბლეტზე */
+    .view-btn {
+        width: 45px;
+        height: 45px;
+        font-size: 18px;
+    }
+
+
+    /* -----------------skills----------------------- */
+
+    .skills-section {
+        padding: 80px 40px;
+    }
+
+    .skills-container {
+        flex-direction: row; /* ტექსტი მარცხნივ, ქარდები მარჯვნივ */
+        align-items: center;
+        gap: 50px;
+    }
+
+    .skills-content {
+        flex: 1;
+        text-align: left; /* ტაბლეტზე ტექსტი მარცხნივ გასწორდეს */
+    }
+
+    .skills-content h2 {
+        font-size: 40px;
+    }
+
+    .skills-grid {
+        flex: 1.5;
+        grid-template-columns: repeat(2, 1fr); /* ორ სვეტად */
+        gap: 20px;
+    }
+
+    /* ----------------------footer----------------------------- */
+
+    .footer-container {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .address-col{
+        margin-top: 8rem;
+    }
 }
 
 @media (min-width: 1024px) {
@@ -170,6 +272,132 @@
         transform: translateX(-50%);
         animation: mouseWheel 1.5s infinite;
     }
+
+        /* -------------about-me------------------ */
+
+    .about-me {
+        padding: 100px 40px; /* მეტი დაშორება დიდ ეკრანზე */
+    }
+
+    .about-me-container {
+        flex-direction: row; /* გვერდიგვერდ განლაგება */
+        align-items: flex-start; /* ტექსტი და სურათი ზემოდან გათანაბრდეს */
+        gap: 60px;
+    }
+
+    /* სურათი მარცხნივ */
+    .about-me-right {
+        flex: 1; /* იკავებს თანაბარ ადგილს */
+        max-width: 450px; /* ზედმეტად რომ არ გაიწელოს */
+    }
+
+    .about-me-right img {
+        aspect-ratio: 4 / 5; /* პორტრეტის ფორმა ტაბლეტზე უფრო უხდება */
+    }
+
+    /* ტექსტი მარჯვნივ */
+    .about-me-left {
+        flex: 1.2; /* ტექსტს ცოტა მეტი ადგილი მივცეთ */
+    }
+
+    .about-me-left h2 {
+        font-size: 44px; /* უფრო დიდი სათაური */
+    }
+
+    /* სქილები ორ სვეტად */
+    .skills-list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 20px;
+    }
+
+    /* საკონტაქტო ბლოკი - ჰორიზონტალურად */
+    .contact {
+        flex-direction: column; 
+        justify-content: space-between;
+        padding: 25px 30px;
+    }
+
+    .email, .call {
+        gap: 20px;
+    }
+
+    .email h4, .call h4 {
+        font-size: 13px; /* ოდნავ დავაპატარავოთ ლეიბლები */
+    }
+
+    .email a, .call a {
+        font-size: 16px;
+    }
+
+    /* -----------------------projects----------------------- */
+
+    .project-item {
+        gap: 80px;
+    }
+
+    /* -----------------skills----------------------- */
+
+    .skills-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        gap: 100px;
+    }
+
+    .skills-content h2 {
+        font-size: 44px;
+    }
+
+    .skills-grid {
+        /* დესკტოპზე 3 სვეტად, რომ სივრცე შეივსოს */
+        grid-template-columns: repeat(3, 1fr); 
+        gap: 25px;
+    }
+
+    .skill-card {
+        padding: 35px 25px;
+        transition: transform 0.3s ease, border-color 0.3s ease;
+    }
+
+    /* ჰოვერ ეფექტი მხოლოდ დესკტოპზე */
+    .skill-card:hover {
+        transform: translateY(-8px);
+        border-color: #D4AF37;
+        background: rgba(212, 175, 55, 0.02);
+    }
+
+    /* ------------------contact----------------------- */
+
+    .contact-container {
+        flex-direction: row; /* გვერდიგვერდ განლაგება */
+        align-items: flex-start;
+        gap: 40px;
+    }
+
+    .contact-info {
+        flex: 1;
+        text-align: left;
+    }
+
+    .contact-form-wrapper {
+        flex: 1.2; /* ფორმას ცოტა მეტი ადგილი მივცეთ */
+    }
+
+    .form-row {
+        flex-direction: row; /* ინპუტები დაჯდეს წყვილებში */
+        gap: 20px;
+    }
+
+    .form-row .input-group {
+        flex: 1;
+    }
+
+    .contact-info .main-title {
+        font-size: 40px; /* სათაურის ოპტიმალური ზომა */
+    }
+
+
+    /* ------------------footer----------------------- */
 }
 
 @keyframes mouseWheel {
@@ -179,7 +407,49 @@
 
 
 @media (min-width: 1200px) {
-    .container{
+    .container, .main-footer{
+        max-width: 1200px;
+        margin: auto
+    }
+
+    .about-me-right {
+        flex: 1; /* იკავებს თანაბარ ადგილს */
+        max-width: 465px; /* ზედმეტად რომ არ გაიწელოს */
+    }
+
+    /* -----------------projects----------------- */
+
+    .projects-container {
+        /* ვზღუდავთ მაქსიმალურ სიგანეს */
+        max-width: 1200px; 
+        margin: 0 auto; /* ცენტრირება */
+        padding: 0 20px;
+    }
+
+    .projects-list {
+        gap: 100px; /* სექციებს შორის მეტი სივრცე სუნთქვისთვის */
+    }
+
+    .project-item {
+        gap: 100px; /* დაშორება სურათსა და ტექსტს შორის */
+    }
+
+    .project-info h3 {
+        font-size: 36px; /* უფრო სოლიდური სათაური */
+    }
+
+    .project-info p {
+        font-size: 16px;
+        max-width: 500px; /* ტექსტი რომ ზედმეტად არ გაიწელოს */
+    }
+
+    /* ყოველი მეორე პროექტის მექანიზმი ძალაში რჩება */
+    .project-item:nth-child(even) {
+        flex-direction: row-reverse;
+    }
+
+    .footer-container{
+        margin: 0;
         max-width: 1200px;
     }
 }

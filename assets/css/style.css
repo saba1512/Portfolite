@@ -4,6 +4,11 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
     list-style: none;
+    text-decoration: none;
+}
+
+html, body{
+    scroll-behavior: smooth;
 }
 
 body{
@@ -14,6 +19,7 @@ header{
     position: fixed;
     width: 100%;
     z-index: 1000;
+    background-color: #0A0E14;
 }
 
 .container{
@@ -26,7 +32,7 @@ header{
 }
 
 .logo{
-    color: #E0E0E0;
+    color: #D4AF37;
     font-size: 30px;
     font-weight: 600;
 }
@@ -163,7 +169,7 @@ header{
     letter-spacing: -1px;
 }
 
-.gold-name {
+.gold-username {
     display: block;
     background: linear-gradient(90deg, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C);
     background-size: 200% auto;
@@ -214,6 +220,10 @@ header{
     transition: 0.3s;
     position: relative;
     overflow: hidden;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
 }
 
 .btn-primary:hover {
@@ -242,29 +252,6 @@ header{
 
 .scroll-down { display: none; }
 
-.bg-effect-1 {
-    position: absolute;
-    width: 600px;
-    height: 600px;
-    background: rgba(212, 175, 55, 0.05);
-    border-radius: 50%;
-    filter: blur(100px);
-    top: -200px;
-    left: -200px;
-    z-index: 1;
-}
-
-.bg-effect-2 {
-    position: absolute;
-    width: 400px;
-    height: 400px;
-    border-radius: 50%;
-    filter: blur(80px);
-    bottom: -150px;
-    right: -100px;
-    z-index: 1;
-}
-
 @keyframes heroFadeIn {
     from { opacity: 0; transform: translateY(30px) scale(0.98); }
     to { opacity: 1; transform: translateY(0) scale(1); }
@@ -282,61 +269,677 @@ header{
 
 
 
-/* -----------------projects----------------- */
+/* -----------------about me----------------- */
 
-
-.projects {
-    padding: 60px 20px;
+.about-me {
     background-color: #0A0E14;
+    padding: 60px 20px;
+    color: #fff;
+    font-family: 'Inter', sans-serif;
+    scroll-margin-top: 50px;
 }
 
-.projects-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 40px;
+.about-me-container {
     max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    /* მობილურზე ჯერ სურათი, მერე ტექსტი */
+    flex-direction: column; 
+    gap: 40px;
+}
+
+/* 1. სურათის ნაწილი (ზემოთ მობილურზე) */
+.about-me-right {
+    width: 100%;
+}
+
+.about-me-right img {
+    width: 100%;
+    aspect-ratio: 1 / 1; /* კვადრატული რომ იყოს მობილურზე */
+    object-fit: cover;
+    border-radius: 24px;
+}
+
+/* 2. ტექსტის ნაწილი */
+.about-me-left {
+    width: 100%;
+}
+
+.about-me-left p:first-child {
+    color: #888;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 13px;
+    margin-bottom: 10px;
+}
+
+.about-me-left h2 {
+    font-size: 32px; /* ოდნავ პატარა მობილურისთვის */
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.about-me-left h2 span {
+    color: #D4AF37;
+}
+
+.about-me-left p {
+    color: rgba(224, 224, 224, 0.8);
+    line-height: 1.8;
+    font-size: 15px;
+}
+
+/* სქილების სია მობილურზე - სათითაოდ ჩაყოლებული */
+.skills-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin: 30px 0;
+    padding: 0;
+}
+
+.skills-list li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 15px;
+}
+
+.check-icon {
+    color: #D4AF37;
+    font-size: 25px;
+}
+
+/* საკონტაქტო ბლოკი */
+.contact {
+    display: flex;
+    flex-direction: column; /* ჩაყოლებით */
+    gap: 20px;
+    background: rgba(255, 255, 255, 0.03);
+    padding: 20px;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.email, .call {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.contact ion-icon {
+    background: #D4AF37;
+    color: #000;
+    width: 30px;
+    height: 30px;
+    padding: 10px;
+    border-radius: 50%;
+}
+
+.email h4, .call h4 {
+    color: #b7b5b5;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+
+.email a, .call a {
+    color: #E0E0E0;
+    font-size: 17px;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+
+/* ----------------skills----------------- */
+
+/* --- მობილურის სტილები (Default) --- */
+.skills-section {
+    background-color: #0A0E14;
+    padding: 60px 20px;
+    color: #fff;
+    font-family: 'Inter', sans-serif;
+}
+
+.skills-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column; /* მობილურზე ტექსტი ზემოთ, ქარდები ქვემოთ */
+    gap: 40px;
+}
+
+.skills-content {
+    text-align: center; /* მობილურზე ცენტრში */
+}
+
+.skills-content .sub-title {
+    color: #888;
+    font-size: 13px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 12px;
+}
+
+.skills-content h2 {
+    font-size: 32px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.skills-content h2 span {
+    color: #D4AF37; /* ოქროსფერი */
+}
+
+.skills-content .desc {
+    color: rgba(224, 224, 224, 0.8);
+    font-size: 15px;
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+.learn-more-btn {
+    display: inline-block;
+    background-color: #D4AF37; /* მწვანე ღილაკი */
+    color: #000;
+    padding: 14px 28px;
+    border-radius: 12px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+/* ქარდების Grid მობილურზე */
+.skills-grid {
+    display: grid;
+    grid-template-columns: 1fr; /* ერთი სვეტი */
+    gap: 15px;
+}
+
+.skill-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 25px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.skill-icon {
+    font-size: 40px;
+    margin-bottom: 12px;
+}
+
+.skill-card h3 {
+    font-size: 17px;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+/* პროგრეს ბარი - კაფსულის სტილი */
+.progress-bar {
+    background: rgba(255, 255, 255, 0.05);
+    height: 45px;
+    border-radius: 12px;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.progress {
+    background: #12151A; /* მუქი შიდა ნაწილი */
+    height: 100%;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 700;
+    color: #D4AF37;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+
+
+/* ----------------------projects---------------------- */
+
+.projects-section {
+    background-color: #0A0E14;
+    padding: 100px 20px;
+    color: #fff;
+    text-align: center;
+}
+
+.projects-container {
+    max-width: 1100px;
     margin: 0 auto;
 }
 
+.projects-section .sub-title {
+    color: #888;
+    text-transform: uppercase;
+    font-size: 13px;
+    letter-spacing: 2px;
+}
+
+.projects-section .main-title {
+    font-size: 42px;
+    margin: 15px 0 60px;
+}
+
+.projects-section .highlight {
+    color: #D4AF37; /* შენი საფირმო მწვანე */
+}
+
+/* პროექტების ჩამონათვალი */
+.projects-list {
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+}
+
 .project-item {
-    text-decoration: none;
-    display: block;
-    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column; /* მობილურზე ჯერ სურათი, მერე ტექსტი */
+    gap: 30px;
+    text-align: left;
+    align-items: center;
 }
 
 .project-img {
     width: 100%;
-    aspect-ratio: 1 / 1; 
+    background: #D1C7BD; /* სქრინშოტის მსგავსი ბეჟი ფონი */
+    border-radius: 20px;
     overflow: hidden;
-    border-radius: 12px;
-    margin-bottom: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .project-img img {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: 0.5s ease;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.5s ease;
 }
 
 .project-item:hover .project-img img {
     transform: scale(1.05);
 }
 
-.project-details h3 {
-    color: #E0E0E0;
-    font-size: 18px;
-    font-weight: 600;
-    margin-bottom: 5px;
-    transition: color 0.3s;
+.project-info {
+    width: 100%;
 }
 
-.project-details p {
-    color: #888;
-    font-size: 14px;
-    font-weight: 400;
-}
-
-.project-item:hover h3 {
+.project-info .category {
     color: #D4AF37;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.project-info h3 {
+    font-size: 28px;
+    margin: 10px 0 15px;
+}
+
+.project-info p {
+    color: #aaa;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+/* მრგვალი ღილაკი ისრით */
+.view-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 50%;
+    color: #fff;
+    font-size: 20px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.view-btn:hover {
+    background: #D4AF37;
+    color: #000;
+    border-color: #D4AF37;
+    transform: rotate(45deg);
+}
+
+/* ქვედა მთავარი ღილაკი */
+.view-more-container {
+    margin-top: 60px;
+}
+
+.view-more-btn {
+    background: #D4AF37;
+    color: #000;
+    padding: 15px 35px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+/* ---------------------------contact--------------------------- */
+
+.contact-section {
+    background-color: #0A0E14;
+    padding: 80px 20px;
+    color: #fff;
+}
+
+.contact-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+/* ინფორმაციის სტილი */
+.contact-info .sub-title {
+    color: #888;
+    text-transform: uppercase;
+    font-size: 13px;
+    letter-spacing: 2px;
+}
+
+.contact-info .main-title {
+    font-size: 36px;
+    margin: 15px 0;
+}
+
+.contact-info .highlight {
+    color: #D4AF37;
+}
+
+.contact-info .desc {
+    color: #aaa;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+.features-list {
+    list-style: none;
+    padding: 0;
+}
+
+.features-list li {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+    font-size: 18px;
+    color: #e0e0e0;
+}
+
+.features-list li ion-icon {
+    color: #D4AF37;
+    font-size: 24px;
+}
+
+/* ფორმის სტილი */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.form-row {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 12px;
+    font-weight: 600;
+}
+
+.input-box {
+    position: relative;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+}
+
+.input-box input, 
+.input-box textarea {
+    width: 100%;
+    background: transparent;
+    border: none;
+    padding: 18px 20px;
+    color: #fff;
+    outline: none;
+    font-family: inherit;
+}
+
+.input-box ion-icon {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #666;
+    font-size: 20px;
+}
+
+.input-box textarea {
+    height: 150px;
+    resize: none;
+}
+
+/* ღილაკი */
+.send-btn {
+    background: #D4AF37;
+    color: #000;
+    border: none;
+    padding: 18px 35px;
+    border-radius: 12px;
+    font-weight: 700;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+    width: fit-content;
+}
+
+.send-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(193, 255, 0, 0.2);
+}
+
+
+/* ---------------footer-------------------- */
+CSS
+/* --- Main Footer Styles --- */
+
+.main-footer {
+    font-family: 'Inter', sans-serif;
+}
+
+.footer-container {
+    max-width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column; /* მობილურზე ერთ სვეტად */
+    gap: 40px;
+}
+
+/* ლოგოს სტილი */
+.footer-logo {
+    font-size: 32px;
+    font-weight: 800;
+    color: #fff;
+    text-decoration: none;
+    letter-spacing: -1px;
+}
+
+.footer-logo span {
+    color: #D4AF37; /* ნეონური მწვანე */
+}
+
+.footer-col{
+    margin-top: 3rem
+}
+
+/* სვეტების სათაურები */
+.footer-col h3 {
+    font-size: 18px;
+    margin-bottom: 25px;
+    font-weight: 600;
+    color: #FFFFFF;
+}
+
+/* Quick Links */
+.footer-links {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-bottom: 25px;
+}
+
+.footer-links a {
+    color: #888;
+    text-decoration: none;
+    font-size: 17px;
+    transition: 0.3s;
+}
+
+.footer-links a:hover {
+    color: #D4AF37;
+}
+
+/* Newsletter ინპუტი (როგორც სქრინზეა) */
+.newsletter {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 10px;
+    max-width: 400px;
+}
+
+.news-input {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex: 1;
+}
+
+.news-input ion-icon {
+    color: #D4AF37;
+    font-size: 20px;
+}
+
+.news-input input {
+    background: transparent;
+    border: none;
+    color: #fff;
+    outline: none;
+    width: 100%;
+}
+
+.sign-up-btn {
+    background: #D4AF37;
+    border: none;
+    color: #000;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.sign-up-btn:hover {
+    transform: scale(1.05);
+}
+
+/* მისამართის ბლოკი */
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.contact-item ion-icon {
+    color: #D4AF37;
+    font-size: 20px;
+}
+
+.contact-item p {
+    color: #888;
+    font-size: 17px;
+}
+
+/* --- Footer Bottom (Copyright & Socials) --- */
+.footer-bottom {
+    margin-top: 60px;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 30px;
+}
+
+.bottom-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    position: relative;
+}
+
+.bottom-container p {
+    color: #666;
+    font-size: 15px;
+}
+
+.bottom-container .highlight {
+    color: #D4AF37;
+}
+
+/* Scroll Top ღილაკი შუაში */
+.scroll-top {
+    background: #D4AF37;
+    color: #000;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    font-size: 22px;
+    text-decoration: none;
+    transition: 0.3s;
+    box-shadow: 0 5px 15px rgba(193, 255, 0, 0.2);
+}
+
+.scroll-top:hover {
+    transform: translateY(-5px);
+}
+
+.social-links {
+    display: flex;
+    gap: 20px;
+}
+
+.social-links a {
+    color: #888;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.social-links a:hover {
+    color: #fff;
 }

@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="./assets/css/media.css">
     <script src="./assets/js/navbar.js" defer></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </head>
 <body>
 
@@ -18,13 +20,12 @@
             
             <nav class="nav">
                 <ul class="nav-links">
-                    <li><a href="#">About Me</a></li>
-                    <li><a href="#">Projects</a></li>
-                    <li><a href="#">Repositories</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="#about">About Me</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="./contact.html">Contact</a></li>
                 </ul>
 
-                <a class="github" href="https://github.com" target="_blank">My GitHub</a>
+                <a class="github" href="https://github.com/saba1512?tab=repositories" target="_blank">My GitHub</a>
             </nav>
             
 
@@ -37,10 +38,9 @@
 
         <nav>
             <ul class="nav-bar">
-                <li><a href="#">About Me</a></li>
-                <li><a href="#">Projects</a></li>
-                <li><a href="#">Repositories</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="./contact.html">Contact</a></li>
                 <li><a href="https://github.com" target="_blank">My GitHub</a></li>
             </ul>
         </nav>
@@ -56,8 +56,8 @@
                 </div>
                 
                 <h1 class="hero-title">
-                    I am <br> 
-                    <span class="gold-name">Saba Khorguashvili</span>
+                    I am <span class="gold-name">saba</span><br> 
+                    <span class="gold-username">Khorguashvili</span>
                 </h1>
 
                 <div class="hero-roles">
@@ -75,7 +75,7 @@
                 
                 <div class="hero-btns">
                     <a href="#projects" class="btn-primary">
-                        Explore My Work <span class="arrow">→</span>
+                        Explore My Work <ion-icon class="arrow" name="arrow-forward-outline"></ion-icon>
                     </a>
                     <a href="#contact" class="btn-secondary">Get in Touch</a>
                 </div>
@@ -86,46 +86,304 @@
                     </div>
                 </div>
             </div>
-            
-            <div class="bg-effect-1"></div>
-            <div class="bg-effect-2"></div>
         </section>
+        <section class="about-me" id="about">
+            <div class="about-me-container">
+                <div class="about-me-left">
+                    <p>About me</p>
 
-        <section class="projects">
-            <div class="projects-grid">
-                <a href="#" class="project-item">
-                    <div class="project-img">
-                        <img src="" alt="Project 1">
-                    </div>
-                    <div class="project-details">
-                        <h3>NFT Marketplace</h3>
-                        <p>Web Development, UI</p>
-                    </div>
-                </a>
+                    <h2>Frontend <span>Developer</span> <br> Focused on Clean and <br> Modern UI</h2>
 
-                <a href="#" class="project-item">
-                    <div class="project-img">
-                        <img src="assets/img/loopstudios.jpg" alt="Project 2">
-                    </div>
-                    <div class="project-details">
-                        <h3>Loopstudios</h3>
-                        <p>Frontend, Layout</p>
-                    </div>
-                </a>
+                    <p>I am a passionate frontend developer with a focus on creating clean and modern user interfaces. I enjoy working with the latest web technologies to build responsive and engaging websites.</p>
 
-                <a href="#" class="project-item">
-                    <div class="project-img">
-                        <img src="assets/img/khashuri.jpg" alt="Project 3">
+                    <div class="skills">
+                        <ul class="skills-list">
+                            <li><i class="check-icon">✓</i> Frontend Development</li>
+                            <li><i class="check-icon">✓</i> Linux Customization</li>
+                            <li><i class="check-icon">✓</i> Responsive UI Design</li>
+                            <li><i class="check-icon">✓</i> Creative Scripting</li>
+                        </ul>
                     </div>
-                    <div class="project-details">
-                        <h3>invena</h3>
-                        <p>SCSS</p>
+
+                    <div class="contact">
+                        <div class="email">
+                            <ion-icon name="mail-outline"></ion-icon>
+                            <div>
+                                <h4>Email</h4>
+                                <a href="mailto:saba.khorguashvili@example.com">saba.khorguashvili@example.com</a>
+                            </div>
+                        </div>
+
+                        <div class="call">
+                            <ion-icon name="call-outline"></ion-icon>
+                            <div>
+                                <h4>Phone</h4>
+                                <a href="tel:+995555123456">+995 555 123 456</a>
+                            </div>
+                        </div>
                     </div>
-                </a>
-                
                 </div>
+
+                <div class="about-me-right">
+                    <img src="./assets/img/Developer_wearing_hoodie_202604092031.jpeg" alt="Your Name">
+                </div>
+            </div>
+        </section>
+        <section class="skills-section" id="skills">
+            <div class="skills-container">
+                
+                <div class="skills-content">
+                    <span class="sub-title">My Skills</span>
+                    <h2 class="main-title">Let’s Explore Popular <br> <span class="highlight">Skills & Experience</span></h2>
+                    <p class="desc">
+                        I specialize in building high-performance web applications and optimizing Linux environments. 
+                        With a focus on clean code and modern UI/UX principles.
+                    </p>
+                    <a href="#projects" class="learn-more-btn">Learn More ↗</a>
+                </div>
+
+                <div class="skills-grid">
+                    
+                    <div class="skill-card">
+                        <div class="skill-icon"><ion-icon name="logo-html5" style="color: #E34F26;"></ion-icon></div>
+                        <h3>HTML5</h3>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 70%;">70%</div>
+                        </div>
+                    </div>
+
+                    <div class="skill-card">
+                        <div class="skill-icon"><ion-icon name="logo-css3" style="color: #1572B6;"></ion-icon></div>
+                        <h3>CSS</h3>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 65%;">65%</div>
+                        </div>
+                    </div>
+
+                    <div class="skill-card">
+                        <div class="skill-icon"><ion-icon name="logo-sass" style="color: #CF649A;"></ion-icon></div>
+                        <h3>SCSS</h3>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 60%;">60%</div>
+                        </div>
+                    </div>
+
+                    <div class="skill-card">
+                        <div class="skill-icon"><ion-icon name="logo-javascript" style="color: #F7DF1E;"></ion-icon></div>
+                        <h3>JavaScript</h3>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 25%;">25%</div>
+                        </div>
+                    </div>
+
+                    <div class="skill-card">
+                        <div class="skill-icon"><ion-icon name="logo-python" style="color: #3776AB;"></ion-icon></div>
+                        <h3>Python</h3>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 20%;">20%</div>
+                        </div>
+                    </div>
+
+                    <div class="skill-card">
+                        <div class="skill-icon"><ion-icon name="logo-tux" style="color: #fff;"></ion-icon></div>
+                        <h3>Linux</h3>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 20%;">20%</div>
+                        </div>
+                    </div>
+
+                    <div class="skill-card">
+                        <div class="skill-icon">
+                            <ion-icon name="hardware-chip-outline" style="color: #00FFCC;"></ion-icon>
+                        </div>
+                        <h3>Artificial Intelligence</h3>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 65%;">65%</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="projects-section" id="projects">
+            <div class="projects-container">
+                <span class="sub-title">Latest Works</span>
+                <h2 class="main-title">Explore My Popular <span class="highlight">Projects</span></h2>
+
+                <div class="projects-list">
+                    
+                    <div class="project-item">
+                        <div class="project-img">
+                            <img src="./assets/img/Laptop_and_smartphone_202604101501.jpeg" alt="Mobile App Design">
+                        </div>
+                        <div class="project-info">
+                            <span class="category">Product Design</span>
+                            <h3>Mobile Application Design</h3>
+                            <p>Sed ut perspiciatis unde omnis iste natus totam rem aperiam eaque inventore veritatis architecto beatae.</p>
+                            <a href="#" class="view-btn"><ion-icon name="arrow-up-outline"></ion-icon></a>
+                        </div>
+                    </div>
+
+                    <div class="project-item">
+                        <div class="project-img">
+                            <img src="./assets/img/Laptop_and_smartphone_202604101512.jpeg" alt="Website Design">
+                        </div>
+                        <div class="project-info">
+                            <span class="category">Product Design</span>
+                            <h3>Website Makeup Design</h3>
+                            <p>Sed ut perspiciatis unde omnis iste natus totam rem aperiam eaque inventore veritatis architecto beatae.</p>
+                            <a href="#" class="view-btn"><ion-icon name="arrow-up-outline"></ion-icon></a>
+                        </div>
+                    </div>
+
+                    <div class="project-item">
+                        <div class="project-img">
+                            <img src="./assets/img/Laptop_and_smartphone_202604101517.jpeg" alt="Brand Identity">
+                        </div>
+                        <div class="project-info">
+                            <span class="category">Product Design</span>
+                            <h3>Brand Identity and Motion Design</h3>
+                            <p>Sed ut perspiciatis unde omnis iste natus totam rem aperiam eaque inventore veritatis architecto beatae.</p>
+                            <a href="#" class="view-btn"><ion-icon name="arrow-up-outline"></ion-icon></a>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="view-more-container">
+                    <a href="#" class="view-more-btn">View More Projects ↗</a>
+                </div>
+            </div>
+        </section>
+        <section class="contact-section" id="contact">
+            <div class="contact-container">
+                <div class="contact-info">
+                    <span class="sub-title">Get In Touch</span>
+                    <h2 class="main-title">Let’s Talk For your <br> <span class="highlight">Next Projects</span></h2>
+                    <p class="desc">
+                        Sed ut perspiciatis unde omnis iste natus totam rem aperiam eaque inventore veritatis architecto beatae.
+                    </p>
+                    
+                    <ul class="features-list">
+                        <li><ion-icon name="checkmark-circle"></ion-icon> 5+ Years Of Experience</li>
+                        <li><ion-icon name="checkmark-circle"></ion-icon> Professional Web Designer</li>
+                        <li><ion-icon name="checkmark-circle"></ion-icon> Mobile Apps Design</li>
+                        <li><ion-icon name="checkmark-circle"></ion-icon> Custom Design Support</li>
+                    </ul>
+                </div>
+
+                <div class="contact-form-wrapper">
+                    <form class="contact-form">
+                        <div class="form-row">
+                            <div class="input-group">
+                                <label>Full Name</label>
+                                <div class="input-box">
+                                    <input type="text" placeholder="Richard D. Hammond">
+                                    <ion-icon name="person-outline"></ion-icon>
+                                </div>
+                            </div>
+                            <div class="input-group">
+                                <label>Email Address</label>
+                                <div class="input-box">
+                                    <input type="email" placeholder="support@gmail.com">
+                                    <ion-icon name="mail-outline"></ion-icon>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="input-group">
+                                <label>Phone Number</label>
+                                <div class="input-box">
+                                    <input type="text" placeholder="+880 (123) 456 88">
+                                    <ion-icon name="call-outline"></ion-icon>
+                                </div>
+                            </div>
+                            <div class="input-group">
+                                <label>Subject</label>
+                                <div class="input-box">
+                                    <input type="text" placeholder="Subject">
+                                    <ion-icon name="text-outline"></ion-icon>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="input-group full-width">
+                            <label>Message</label>
+                            <div class="input-box">
+                                <textarea placeholder="write message"></textarea>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="send-btn">Send Us Message <ion-icon name="chevron-forward-outline"></ion-icon></button>
+                    </form>
+                </div>
+            </div>
         </section>
     </main>
+    <footer class="main-footer">
+        <div class="footer-container">
+            <div class="for-tablet">
+                <div class="footer-col logo-col">
+                    <a href="#" class="footer-logo">
+                        <span>Portfolite</span>
+                    </a>
+                </div>
+    
+                <div class="footer-col links-col">
+                    <h3>Quick Link</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Service</a></li>
+                        <li><a href="#">Projects</a></li>
+                        <li><a href="#">Pricing</a></li>
+                        <li><a href="#">Faqs</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                    
+                    <div class="newsletter">
+                        <div class="news-input">
+                            <ion-icon name="mail-outline"></ion-icon>
+                            <input type="email" placeholder="Email Address">
+                        </div>
+                        <button class="sign-up-btn">Sign Up ↗</button>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="footer-col address-col">
+                <h3>Address</h3>
+                <div class="contact-item">
+                    <ion-icon name="location-outline"></ion-icon>
+                    <p>55 Main Street, 2nd block, New York City</p>
+                </div>
+                <div class="contact-item">
+                    <ion-icon name="mail-outline"></ion-icon>
+                    <p>support@gmail.com</p>
+                </div>
+                <div class="contact-item">
+                    <ion-icon name="call-outline"></ion-icon>
+                    <p>+880 (123) 456 88</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="bottom-container">
+                <p>Copyright @2023, <span class="highlight">Noxfolio</span> All Rights Reserved</p>
+                
+                <a href="#" class="scroll-top">
+                    <ion-icon name="arrow-up-outline"></ion-icon>
+                </a>
+
+                <div class="social-links">
+                    <a href="#">Facebook</a>
+                    <a href="#">Twitter</a>
+                    <a href="#">Instagram</a>
+                    <a href="#">LinkedIn</a>
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
 
