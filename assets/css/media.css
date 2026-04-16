@@ -7,12 +7,13 @@
     .nav-links li a{
         color: #E0E0E0;
         text-decoration: none;
-        font-size: 18px;
+        font-size: 14px;
         font-weight: 500;
         letter-spacing: 1.5px;
         transition: 0.3s;
         position: relative;
         padding-bottom: 5px;
+        font-family: "Raleway", sans-serif;
     }
 
     .nav-links li a::after {
@@ -133,19 +134,20 @@
         font-size: 18px;
     }
 
-
+    
+    
     /* -----------------skills----------------------- */
-
+    
     .skills-section {
         padding: 80px 40px;
     }
-
+    
     .skills-container {
         flex-direction: row; /* ტექსტი მარცხნივ, ქარდები მარჯვნივ */
         align-items: center;
         gap: 50px;
     }
-
+    
     .skills-content {
         flex: 1;
         text-align: left; /* ტაბლეტზე ტექსტი მარცხნივ გასწორდეს */
@@ -154,7 +156,7 @@
     .skills-content h2 {
         font-size: 40px;
     }
-
+    
     .skills-grid {
         flex: 1.5;
         grid-template-columns: repeat(2, 1fr); /* ორ სვეტად */
@@ -162,7 +164,6 @@
     }
 
     /* ----------------------footer----------------------------- */
-
     .footer-container {
         flex-direction: row;
         justify-content: space-between;
@@ -189,25 +190,27 @@
     }
 
     .nav-links li a{
-        font-size: 20px;
+        font-size: 17px;
     }
 
     .github{
         display: block;
         background-color: #D4AF37;
-        color: #E0E0E0;
-        padding: 12px 22px;
+        color: #000000;
+        padding: 12px 30px;
         border-radius: 10px;
         text-decoration: none;
         font-size: 18px;
         font-weight: 500;
         letter-spacing: 1.5px;
         transition: 0.5s;
+        font-family: "Raleway", sans-serif;
     }
 
     .github:hover {
-        background-color: #E0E0E0;
-        color: #D4AF37;
+    background: #E0E0E0;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(212, 175, 55, 0.2);
     }
 
     /* ------------------hero--------------- */
@@ -367,6 +370,11 @@
     }
 
     /* ------------------contact----------------------- */
+
+    #contact{
+        scroll-margin-top: 100px;
+    }
+
 
     .contact-container {
         flex-direction: row; /* გვერდიგვერდ განლაგება */
